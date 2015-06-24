@@ -1,0 +1,1 @@
+These are my scripts for using Tor through Python. "tor_id_single_use.py" focuses on a single IP address check. "tor_id_refresh" makes 1 IP address check, refreshes the IP address through Tor, and makes another IP address check.
