@@ -10,7 +10,7 @@ with Controller.from_port(port = 9151) as controller:
     socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9150)
     socket.socket = socks.socksocket
 
-    user_agent = 'Mozilla/5.0'
+    user_agent = 'Chrome'
     heads = {'User-Agent': user_agent}
 
     req = urllib2.Request("http://whatismyipaddress.com/", headers=heads)
@@ -26,7 +26,7 @@ with Controller.from_port(port = 9151) as controller:
     socket.socket = socks.socksocket
 
     # Using BeautifulSoup again
-    user_agent = 'Mozilla/5.0'
+    user_agent = 'Chrome'
     heads = {'User-Agent': user_agent}
 
     req = urllib2.Request("http://whatismyipaddress.com/", headers=heads)

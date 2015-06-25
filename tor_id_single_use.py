@@ -1,12 +1,13 @@
 ''' Python Tor '''
 import socks, socket, urllib2, requests
+from bs4 import BeautifulSoup
 
-# Tor magic --> Remember to open Tor Browser
+# Tor magic --> Remember to launch Tor Browser
 socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 9150)
 socket.socket = socks.socksocket
 
-# BeautifulSoup magic --> Copied from my previous work
-user_agent = 'Mozilla/5.0 (compatible; MSIE 5.5; Windows NT)'
+# BeautifulSoup magic
+user_agent = 'Chrome'
 heads = {'User-Agent': user_agent}
 
 req = urllib2.Request("http://whatismyipaddress.com/", headers=heads)
